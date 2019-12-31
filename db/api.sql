@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 31, 2019 at 03:52 PM
+-- Generation Time: Dec 31, 2019 at 04:52 PM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.3.5
 
@@ -80,6 +80,13 @@ CREATE TABLE `oauth_access_tokens` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `expires_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `oauth_access_tokens`
+--
+
+INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`) VALUES
+('2422431f3f263deaf65b72e239dd3fa57468d9c1eaa033b1110472182b8810187cc6a251dd9e991b', 1, 1, 'token', '[]', 0, '2019-12-31 09:49:51', '2019-12-31 09:49:51', '2020-12-31 15:49:51');
 
 -- --------------------------------------------------------
 
@@ -186,6 +193,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Rejaul', 'rejauldu@gmail.com', NULL, '$2y$10$jk/hoRQVFIN/P8hgOG83ueWwbaAGiXc1yba3xI13dzBZBY4bXH.cC', NULL, '2019-12-31 09:49:50', '2019-12-31 09:49:50');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -280,7 +294,7 @@ ALTER TABLE `oauth_personal_access_clients`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
